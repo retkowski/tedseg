@@ -13,7 +13,7 @@ The result is a structured dataset for each of the `train`, `val`, and `test` pa
 
 The following JSON files are in the directory, containting the talk IDs that are associated with each partition.
 
-```
+```bash
 talk_ids.train.json
 talk_ids.val.json
 talk_ids.test.json
@@ -37,7 +37,7 @@ pip install pandas requests tqdm nltk
 
 After running the script, you'll get three JSON files:
 
-```
+```bash
 transcripts.train.json
 transcripts.val.json
 transcripts.test.json
@@ -50,7 +50,7 @@ Each entry in the file is a dictionary with:
 |----------|-----------------------|-----------------------------------------------------------------------------|
 | talk_id  | `string`              | The TED talk ID                                                             |
 | text     | `list[string]`        | A list of tokenized sentences from the talk                                |
-| targets  | `string` (prefixed with `|=`) | Binary string marking paragraph starts (e.g., `|=100100` means paragraphs start at sentences 0 and 3) |
+| targets  | `string` (prefixed with `\|=`) | Binary string marking paragraph starts (e.g., `\|=010100` means paragraph boundaries are before sentences 1 and 3) |
 
 ## 🛠 Notes
 - Sentences are tokenized using NLTK's `sent_tokenize`.
