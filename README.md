@@ -1,4 +1,4 @@
-# TEDSeg: Download & Preprocessing
+# TEDPara: Download & Preprocessing
 
 This script processes TED Talk transcripts by:
 - Downloading transcripts via TED's public GraphQL API
@@ -55,4 +55,5 @@ Each entry in the file is a dictionary with:
 ## 🛠 Notes
 - Sentences are tokenized using NLTK's `sent_tokenize`.
 - Paragraph boundaries are encoded with a 1 at the start of each paragraph, 0 otherwise.
+
 - The binary string is prepended with `|=` to enforce string formatting when saving/loading.
